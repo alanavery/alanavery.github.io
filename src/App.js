@@ -13,6 +13,17 @@ const App = () => {
     {
       id: 1,
       category: 'web development',
+      title: 'Base Hotel',
+      thumbnail:
+        'https://res.cloudinary.com/alanavery/image/upload/v1612542498/thumbnails/Custom_Size_4_v8rsjg.jpg',
+      url: 'https://base-aa.herokuapp.com',
+      heroImg: '',
+      img: [],
+      description: ''
+    },
+    {
+      id: 2,
+      category: 'web development',
       title: 'Kaleidoscope',
       thumbnail:
         'https://res.cloudinary.com/alanavery/image/upload/v1610487579/thumbnails/Custom_Size_1_qrjuwy.jpg',
@@ -22,7 +33,7 @@ const App = () => {
       description: ''
     },
     {
-      id: 2,
+      id: 3,
       category: 'web development',
       title: 'Trip Planner',
       thumbnail:
@@ -33,7 +44,7 @@ const App = () => {
       description: ''
     },
     {
-      id: 3,
+      id: 4,
       category: 'web development',
       title: 'Guess Who?',
       thumbnail:
@@ -44,7 +55,7 @@ const App = () => {
       description: ''
     },
     {
-      id: 4,
+      id: 5,
       category: 'graphic design',
       title: 'LGBT Pride',
       thumbnail:
@@ -60,7 +71,7 @@ const App = () => {
       description: `A Miller Lite campaign targeted exclusively towards the LGBT community in Chicago. I chose to forgo rainbows and typical symbols of LGBT life, in favor of something unexpected and unique to the city: the names of gay neighborhoods and the streets that make them up.`
     },
     {
-      id: 5,
+      id: 6,
       category: 'graphic design',
       title: `Jack's Pizza`,
       thumbnail:
@@ -77,7 +88,7 @@ const App = () => {
       description: `A complete visual rebranding of Jack's Pizza, including style guide. The weathered wood background is a nod to Jack's history as a Midwestern company, and it makes for a flexible design element when creating creative extensions.`
     },
     {
-      id: 6,
+      id: 7,
       category: 'graphic design',
       title: 'Brunchfast',
       thumbnail:
@@ -93,24 +104,24 @@ const App = () => {
       ],
       description: `A variety of in-restaurant marketing materials featuring the sub-brand, Brunchfast. The trick in developing this brand-within-a-brand was creating a visual identity that felt elevated and reminiscent of brunch, but that still felt believable as a QSR (quick service restaurant) promotion.`
     },
-    {
-      id: 7,
-      category: 'graphic design',
-      title: 'Logos',
-      thumbnail:
-        'https://res.cloudinary.com/alanavery/image/upload/v1609008189/thumbnails/thumbnails-v024_xeli0q.jpg',
-      heroImg: 'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/EPN_c3tlb7.jpg',
-      img: [
-        'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/A_Break_For_Lunch_a4kq3y.jpg',
-        'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/WODer_taaoti.jpg',
-        'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/Bucs_In_Britain_npqkec.jpg',
-        'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/Sandwich_Nation_gg1lyh.jpg',
-        'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/Clutch_ph6kly.jpg',
-        'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/Grandwich_mxlruf.jpg',
-        'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/Mardi_Gras_qhzec0.jpg'
-      ],
-      description: `A random collection of logos created for various clients over the years. While each is a little different in style, I aim to create logos that are as concise as possible, yet full of character.`
-    },
+    // {
+    //   id: 7,
+    //   category: 'graphic design',
+    //   title: 'Logos',
+    //   thumbnail:
+    //     'https://res.cloudinary.com/alanavery/image/upload/v1609008189/thumbnails/thumbnails-v024_xeli0q.jpg',
+    //   heroImg: 'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/EPN_c3tlb7.jpg',
+    //   img: [
+    //     'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/A_Break_For_Lunch_a4kq3y.jpg',
+    //     'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/WODer_taaoti.jpg',
+    //     'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/Bucs_In_Britain_npqkec.jpg',
+    //     'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/Sandwich_Nation_gg1lyh.jpg',
+    //     'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/Clutch_ph6kly.jpg',
+    //     'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/Grandwich_mxlruf.jpg',
+    //     'https://res.cloudinary.com/alanavery/image/upload/v1608993499/logos/Mardi_Gras_qhzec0.jpg'
+    //   ],
+    //   description: `A random collection of logos created for various clients over the years. While each is a little different in style, I aim to create logos that are as concise as possible, yet full of character.`
+    // },
     {
       id: 8,
       category: 'graphic design',
@@ -273,7 +284,9 @@ const App = () => {
               } else {
                 prevId = work.length;
               }
-              return <Project project={project} nextId={nextId} prevId={prevId} />;
+              return (
+                <Project project={project} nextId={nextId} prevId={prevId} />
+              );
             }}
           />
           <Route path="/about" component={About} />
