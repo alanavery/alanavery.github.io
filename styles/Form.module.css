@@ -1,0 +1,57 @@
+/* Notes */
+/* <fieldset> does not work with flexbox */
+
+/* Input text styling —————————— */
+.profileForm {
+  width: 600px;
+}
+
+.formRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.formRow label {
+  margin-bottom: 20px;
+  padding-right: var(--label-padding-right);
+  text-align: right;
+  margin-top: 5px;
+  width: var(--label-width);
+}
+
+.formRow input[type='text'],
+.formRow input[type='email'] {
+  border-radius: var(--border-radius);
+  color: var(--color-main);
+  font-size: var(--input-text-size);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(186, 189, 190);
+  padding: 7px;
+  width: var(--widget-width);
+}
+
+.formRow input[type='email']:invalid {
+  border: 1.5px solid rgb(212, 53, 56);
+  color: rgb(212, 53, 56);
+  box-shadow: none; /* Firefox | Removes default red glow */
+}
+
+/* Radio button styling —————————— */
+
+.radioFormRow {
+  border: none;
+  margin-bottom: var(--margin-bottom);
+}
+
+.radioFormRow legend {
+  width: var(--label-width);
+  padding-right: var(--label-padding-right);
+  text-align: right;
+  float: left;
+}
+
+.radioFormRow .radioLabel {
+  font-size: var(--input-text-size);
+  padding: 2px 20px 0 4px;
+}
